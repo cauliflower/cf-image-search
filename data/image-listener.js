@@ -4,7 +4,6 @@ var currentURL;
 document.body.addEventListener('click', function(event) {
   var element = event.target;
   if (element.nodeName.toUpperCase() === 'IMG') {
-    console.log('Element added', element.src);
     currentURL = element.src;
   }
 });
