@@ -1,5 +1,6 @@
-var images = document.querySelectorAll('img');
-
-for (var i=0, l=images.length; i<l; i++) {
-  images.addEventListener('click', handleClickListener);
-}
+document.body.addEventListener('click', function(event) {
+  var element = event.target;
+  if (element.nodeName.toUpperCase() === 'IMG') {
+    self.port.emit('elementsUrl', element.src);
+  }
+});
