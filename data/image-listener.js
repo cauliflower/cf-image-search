@@ -16,6 +16,8 @@ document.body.addEventListener('click', function(event) {
     // computed property of `background-image` contains resolved URLs.
     if (match = urlRe.exec(computedBackgroundImage)) {
       currentURL = match[1];
+    } else {
+      currentURL = undefined;
     }
   }
   console.log('Image found: ' + currentURL);
